@@ -132,3 +132,28 @@ tab은 4개의 sapces로 잘 변환되었고 입출력 모두 정상적으로 �
 
 ---
 ### 예시답안
+```python
+# c:/doit/tabto4.py
+import sys
+
+src = sys.argv[1]
+dst = sys.argv[2]
+
+f = open(src)
+tab_content = f.read()
+f.close()
+
+space_content = tab_content.replace("\t", " "*4)
+
+f = open(dst, 'w')
+f.write(space_content)
+f.close()
+```
+예시 답안을 보면 sys.argv를 많이 사용하는 것 같다.
+같은 폴더 내에서 관리하고 있다면 확실히 편리한 방법인데 아직 손에 익지 않아서 잘 안쓰게 된다..
+
+**내가 간과한 부분**
+- 왜 for문으로 문장을 하나하나 불러왔지..? replace()는 그냥 전체 텍스트를 전부 불러와도 가능한데 말이다.
+- `" "*4` 와 같은 편리함을 제발 잊지말자
+
+
