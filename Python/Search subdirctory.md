@@ -49,6 +49,19 @@ C:/Users/gusfk/desktop\git_hban\git_cpp\lab3-part1.cpp
 ```
 위와 같이 다양한 하위 폴더들에서 찾아낸 것을 볼 수 있다.
 
+>glob에서 **가 무슨 의미인지 확인해보니
+>
+>In other words, while /x/*/y will match:
+>
+>/x/a/y
+>/x/b/y
+>and so on (only one directory level in the wildcard section), the double asterisk /x/**/y will also match things like:
+>
+>/x/any/number/of/levels/y
+>
+>라고 한다.
+>
+>https://stackoverflow.com/questions/32604656/what-is-the-glob-character
 
 ---
 
@@ -58,15 +71,22 @@ import os
 
 def search(dirname):
     try:
-        filenames = os.listdir(dirname)
+        ## 해당 위치에 있는 모든 파일과 폴더들을 리스트에 담는다.
+        filenames = os.listdir(dirname)   
+        ## 리스트에 담긴 이름들을 하나씩 확인한다.
         for filename in filenames:
+            ## 정확한 path를 설정하기 위해서 앞서 설정했던 위치와 join한다.(os.path.join: 경로와 파일명을 합침)
             full_filename = os.path.join(dirname, filename)
+            ## 만약 full_filename이 디렉토리라면 다시 search함수를 다시 적용한다.
             if os.path.isdir(full_filename):
                 search(full_filename)
+            ##아니라면 확장자가 .py인지를 확인하고 출력한다.
             else:
+                ## os.path.splitext: 파일명에서 확장자만 따로 떨어뜨린다. (경로 , 확장자)로 출력되기 때문에 인덱스로 확장자만 선택
                 ext = os.path.splitext(full_filename)[-1]
                 if ext == '.py': 
                     print(full_filename)
+    ## PermissionError: os.listdir를 수행할 때 권한이 없는 디렉터리에 접근하더라도 프로그램이 오류로 종료되지 않고 그냥 수행되도록
     except PermissionError:
         pass
 
