@@ -73,4 +73,4 @@ def search(dirname):
 search("c:/")
 ```
 나는 glob모듈을 사용해서 짧게 만들 수 있었고 이 답안은 os의 여러 함수들을 이용하여 재귀함수를 다 구현하였다.
-glob모듈에서 recursive를 저렇게 간단하게 만들 수 있다니 감동적이다.
+glob모듈에서 recursion을 저렇게 간단하게 만들 수 있다니 감동적이다.
