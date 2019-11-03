@@ -22,4 +22,7 @@ Top Recommended Answer:
 sum([x for x in range(1000) if x%3==0 or x%5==0]) 
 ```
 List Comprehension을 사용
+```
+[표현식 for 항목 in 반복가능객체 if 조건문]
+```
 이 표현법에 좀 더 익숙해져보자.
