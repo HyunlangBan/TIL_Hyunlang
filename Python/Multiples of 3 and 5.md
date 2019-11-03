@@ -22,3 +22,4 @@ Top Recommended Answer:
 sum([x for x in range(1000) if x%3==0 or x%5==0]) 
 ```
 List Comprehension을 사용
+이 표현법에 좀 더 익숙해져보자.
