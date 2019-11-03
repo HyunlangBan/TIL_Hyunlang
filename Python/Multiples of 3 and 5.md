@@ -11,6 +11,7 @@ My Answer:
 result = 0
 
 for i in range(1,1000):
+# 0은 더해도 0이므로 range(1000) 가능
     if (i % 3 == 0) or (i % 5 ==0):
         result += i
 
