@@ -11,5 +11,4 @@ Hyunlang이 오늘 배운 것을 다음의 규칙으로 commit합니다. [though
 ### Python
    - 점프투파이썬
      - [Replace a tab into 4 sapces](https://github.com/HyunlangBan/TIL_Hyunlang/blob/master/Python/Replace%20a%20tab%20into%204%20spaces.md)
-### C++
- 
+     - [Search Subdirectiory](https://github.com/HyunlangBan/TIL_Hyunlang/blob/master/Python/Search%20subdirctory.md)
